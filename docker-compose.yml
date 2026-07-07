@@ -1,0 +1,34 @@
+# Оркестрация системы микросервисов. Детали — docs/DEPLOYMENT.md.
+# Один брокер на систему; каждый сервис — отдельный контейнер со своим Dockerfile.
+#
+# Скелет. Замени <...> под свои сервисы и выбранный брокер (Kafka / Redpanda / NATS).
+
+services:
+  broker:
+    # Выбери образ брокера: Kafka / Redpanda / NATS. Пример — Redpanda.
+    image: redpandadata/redpanda:latest
+    command: redpanda start --overprovisioned --smp 1 --memory 1G
+    ports:
+      - "9092:9092"     # клиентский порт брокера
+    volumes:
+      - broker-data:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD", "rpk", "cluster", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # <service-a>:
+  #   build: { context: ./services/<service-a> }
+  #   depends_on: [broker]
+  #   env_file: .env
+  #   # внешние порты — только если сервис принимает трафик снаружи:
+  #   # ports: ["8080:8080"]
+
+  # <service-b>:
+  #   build: { context: ./services/<service-b> }
+  #   depends_on: [broker]
+  #   env_file: .env
+
+volumes:
+  broker-data:
