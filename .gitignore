@@ -1,0 +1,23 @@
+# Общие артефакты сборки/окружения — дополни под свой стек.
+/target/
+/build/
+/dist/
+/out/
+*.log
+
+# Зависимости
+/node_modules/
+/.venv/
+/__pycache__/
+*.pyc
+
+# IDE / ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Локальные секреты и конфиги окружения
+*.local
+.env
+config/local.*
