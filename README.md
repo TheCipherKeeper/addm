@@ -28,10 +28,10 @@
 
 ## Модель
 
-```
-этот репо (методология)   →  хаб-репо (из skeletons/hub)   →  сервис-репо ×N (из skeletons/service)
-   корень авторитета            COMPOSITION/CONVENTIONS/          код, спеки, ARCHITECTURE/BACKLOG/adr
-                               системный compose / ADR
+```mermaid
+graph LR
+  M["этот репо<br/>(методология)<br/>корень авторитета"] --> H["хаб-репо<br/>(из skeletons/hub)<br/>COMPOSITION / CONVENTIONS<br/>системный compose / ADR"]
+  H --> S["сервис-репо ×N<br/>(из skeletons/service)<br/>код, спеки<br/>ARCHITECTURE / BACKLOG / adr"]
 ```
 
 - **Этот репо** — корень авторитета, не инстанцируется как сервис, не содержит
