@@ -80,7 +80,7 @@
 | 8 | ARCHITECTURE (роль/топики/граница) соответствует хабу@pin | agent | нет | cross-cutting |
 | 9 | Сервис пинит версию контракта; версия ещё поддерживается хабом | rule | да | cross-cutting |
 | 10 | Stub не выдаётся за реализацию (placeholder/TODO помечены) | agent | нет | cross-cutting |
-| 11 | Доки не противоречат; старший приоритет побеждает | agent | нет | cross-cutting |
+| 11 | Доки не противоречат: внутри яруса (в т.ч. `guide/` против `refs/`) — дефект (чинят к одной правде), между ярусами — старший побеждает | agent | нет | cross-cutting |
 | 12 | ADR-ссылки из ARCHITECTURE существуют в хабе | rule | да | cross-cutting |
 | 13 | Модуль экспонирует каноничные швы (`usecases/`+`ports`+`domain`+`adapters/` по per-stack имён); каждый юзкейс определяет input port | rule (structural) | да | модуль |
 | 14 | Направление зависимостей: usecases → только ports+domain, не adapters; adapters реализуют ports; модуль реэкспортит только input ports | agent | нет | модуль+ |
