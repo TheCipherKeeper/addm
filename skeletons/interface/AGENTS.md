@@ -20,12 +20,14 @@
 
 ## Документация (приоритет)
 
-В порядке убывания: хаб (если есть) → этот `AGENTS.md` → методология
-(`<methodology-repo>/docs/guide/` и `/docs/refs/`) → `docs/ARCHITECTURE.md` →
-код.
+В порядке убывания **по ярусам**: хаб (если есть) → этот `AGENTS.md` →
+методология (`<methodology-repo>/docs/guide/` и `/docs/refs/` — **равные**,
+разные виды) → `docs/ARCHITECTURE.md` → код.
 
-`<methodology-repo>/docs/INDEX.md` — роутер. Противоречие → старший побеждает;
-расхождение → ADR (`<methodology-repo>/docs/guide/60-adr.md`).
+`<methodology-repo>/docs/INDEX.md` — роутер. Приоритет арбитражирует
+**только между ярусами**. Противоречие **внутри яруса** (в т.ч. `guide/` против
+`refs/`) — **дефект**, а не «старший побеждает»: чинят к одной правде либо
+фиксируют в ADR (`<methodology-repo>/docs/guide/60-adr.md`).
 
 ## Модель ветвления
 
