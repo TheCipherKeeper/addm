@@ -22,7 +22,7 @@
    `docker-compose.yml`, `Dockerfile` (когда заведёшь), манифесте
    (`pyproject.toml` / `go.mod` / `Cargo.toml` / `package.json`), `.env.example`.
 4. **Завести workspace модулей** по layout выбранного стека
-   (`docs/refs/LAYOUT.md`): Rust `crates/`, Go `internal/`+`pkg/`,
+   (`docs/refs/LAYOUT.md`): Rust `src/`, Go `internal/`+`pkg/`,
    Python `src/<service>/`, TypeScript `src/`.
 5. **Завести первые спеки:** удали `docs/specs/EXAMPLE.md`, заведи
    `docs/specs/<module>.md` по канону (`docs/refs/SPEC.md`). Подробно — фаза 20.
