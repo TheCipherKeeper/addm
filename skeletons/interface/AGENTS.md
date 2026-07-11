@@ -11,9 +11,8 @@
 > брокер-клиент и не peer-сервис. Зовёт **только presentation-эндпоинты
 > gateway-сервиса** по HTTP/WS, документированные в `ARCHITECTURE.md`
 > **gateway** → *Доверительная граница* (модель —
-> `<methodology-repo>/docs/refs/COMMUNICATION.md` → *Клиентский край*;
-> gateway — единственный browser-facing surface, прочие сервисы интерфейс не
-> зовёт). Стек — фиксированный React/TS
+> `<methodology-repo>/docs/refs/COMMUNICATION.md` → *Клиентский край*). Стек —
+> фиксированный React/TS
 > (`<methodology-repo>/docs/refs/STACKS.md` → *frontend*).
 >
 > Системный контекст (состав программы, список сервисов/интерфейсов, event
