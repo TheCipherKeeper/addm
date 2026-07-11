@@ -12,7 +12,7 @@
 1. **Каталог модуля** по layout выбранного стека (`docs/refs/LAYOUT.md`):
    - Python: пакет/подпакет под `src/<service>/`.
    - Go: пакет под `internal/` или `pkg/`.
-   - Rust: crate в `crates/` (workspace) или модуль под `src/`.
+   - Rust: модуль под `src/` (workspace `crates/` — только через ADR).
    - TypeScript: директория/модуль под `src/`.
 2. **Внутренняя структура модуля** по канону usecase-архитектуры
    (`docs/refs/MODULE.md`): `usecases/` + `ports/` + `domain/` + `adapters/`.

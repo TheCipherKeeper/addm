@@ -1,7 +1,7 @@
 # Раскладка каталогов сервиса (референс)
 
 **Один репо = один микросервис.** Внутри сервиса — **workspace из модулей**
-(«монорепо в рамках сервиса»): Rust `crates/`, Go — несколько пакетов под
+(«монорепо в рамках сервиса»): Rust `src/`, Go — несколько пакетов под
 `internal/`/`pkg/`, Python — подпакеты под `src/`, TypeScript — модули под
 `src/`. Каждый модуль — отдельная спека в `docs/specs/<module>.md`.
 
@@ -28,7 +28,7 @@
       <module>.md           контракт модуля (по одному на модуль)
       EXAMPLE.md            # пример — удали
   <workspace>/              модули сервиса — по layout выбранного стека:
-                            crates/ (Rust), internal/ + pkg/ (Go),
+                            src/ (Rust), internal/ + pkg/ (Go),
                             src/<service>/ (Python), src/ (TS)
   <manifest>                pyproject.toml / go.mod / Cargo.toml / package.json
   <lock>                    uv.lock / go.sum / Cargo.lock / pnpm-lock.yaml
@@ -60,7 +60,8 @@
 
 - Python: пакет/подпакет под `src/<service>/`.
 - Go: пакет под `internal/` или `pkg/`.
-- Rust: crate в `crates/` (если workspace) или модуль под `src/`.
+- Rust: модуль под `src/`. Workspace `crates/` — только через ADR
+  (`docs/guide/60-adr.md`), как отклонение от канона.
 - TypeScript: директория/модуль под `src/`.
 
 ## Где живут общие вещи

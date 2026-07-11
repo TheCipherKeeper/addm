@@ -55,7 +55,7 @@ graph LR
 
 | шов | Rust | Go | Python | TypeScript |
 |---|---|---|---|---|
-| корень модуля | `src/<module>/` (или crate) | `internal/<module>/` | `src/<service>/<module>/` | `src/<module>/` |
+| корень модуля | `src/<module>/` | `internal/<module>/` | `src/<service>/<module>/` | `src/<module>/` |
 | юзкейс | `usecases/<name>.rs` (`Input`, `Port` trait, `Handler`) | `usecase/<name>.go` (interface + struct) | `usecases/<name>.py` (`Protocol` + class) | `usecases/<name>.ts` (interface + class) |
 | output ports | `ports.rs` (traits) | `ports.go` (interfaces) | `ports.py` (Protocols) | `ports.ts` (interfaces) |
 | domain | `domain.rs` (или `domain/`) | `domain.go` (или `domain/`) | `domain.py` | `domain.ts` |

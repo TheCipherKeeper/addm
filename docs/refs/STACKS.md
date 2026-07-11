@@ -69,8 +69,10 @@ go build -o bin/<service> ./cmd/<service>
 ## Rust
 
 - **Runtime:** Rust stable.
-- **Менеджер:** `cargo`. Workspace опционален (`crates/`).
-- **Layout:** один crate или workspace `crates/<name>`.
+- **Менеджер:** `cargo`.
+- **Layout:** один crate; модули — под `src/`. Workspace `crates/<name>` —
+  только если модули обязаны быть независимыми crate'ами; фиксируется ADR
+  (`docs/guide/60-adr.md`, отклонение от канона).
 - **Линт:** `cargo fmt`, `cargo clippy`.
 - **Тесты:** `cargo test`.
 - **Сборка:** `cargo build --release`.
@@ -82,7 +84,7 @@ src/
   main.rs            # точка входа
   lib.rs             # (опц.)
 tests/               # интеграционные
-crates/              # (опц. workspace)
+crates/              # только при workspace (через ADR)
 ```
 
 Команды:
