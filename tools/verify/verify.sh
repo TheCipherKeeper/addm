@@ -8,4 +8,4 @@ done
 for file in ARCHITECTURE.md BACKLOG.md COMPOSITION.md CONVENTIONS.md Dockerfile docker-compose.yml; do
   test ! -e "$root/$file" || { echo "VER-002: forbidden root artifact $file" >&2; exit 1; }
 done
-echo '{"status":"passed","repository_type":"methodology","methodology_version":"development","checks":[]}'
+echo '{"status":"passed","repository_type":"methodology","checks":[]}'
