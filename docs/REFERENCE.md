@@ -58,6 +58,8 @@
 | TypeScript | `pnpm lint && tsc --noEmit` | `pnpm test` | `pnpm build` |
 
 Репозиторий выбирает один стек и фиксирует точные команды в своём `AGENTS.md`.
+Сервис использует только Python, Go или Rust; TypeScript допустим для интерфейса
+или автономного компонента.
 
 ## Git
 

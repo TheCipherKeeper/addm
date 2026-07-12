@@ -8,7 +8,7 @@
 
 - Выполняй только текущую задачу из `<hub>/BACKLOG.md`.
 - Работай в `feat/TASK-NNNN-<slug>` через PR; прямой commit в `main` запрещён.
-- Один сервис использует один основной язык.
+- Один сервис использует только один из Python, Go или Rust.
 - Каждый модуль следует обязательным границам `domain`, `application`, `ports`,
   `adapters` из архитектурного канона; зависимости направлены внутрь.
 - Не создавай фиктивные интерфейсы, реализации или TODO ради заполнения структуры.
@@ -35,7 +35,6 @@
 | Python | `ruff format --check . && ruff check . && pyright` | `pytest` | `uv build` |
 | Go | `gofmt -l . && go vet ./...` | `go test ./...` | `go build ./...` |
 | Rust | `cargo fmt --check && cargo clippy -- -D warnings` | `cargo test` | `cargo build --release` |
-| TypeScript | `pnpm lint && tsc --noEmit` | `pnpm test` | `pnpm build` |
 
 Перед слиянием обязательны средство проверки методологии, команды выбранного стека и
 применимые проверки из `<methodology-repo>/docs/REFERENCE.md`.
