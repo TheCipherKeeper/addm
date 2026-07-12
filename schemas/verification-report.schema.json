@@ -1,11 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["status", "repository_type", "methodology_version", "checks"],
+  "required": ["status", "repository_type", "checks"],
   "properties": {
     "status": { "enum": ["passed", "failed"] },
     "repository_type": { "type": "string" },
-    "methodology_version": { "type": "string" },
     "checks": {
       "type": "array",
       "items": {
