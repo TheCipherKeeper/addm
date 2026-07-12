@@ -88,7 +88,6 @@ if ($failed) { $overall = "failed" }
 $result = [pscustomobject]@{
     status = $overall
     repository_type = $repositoryType
-    methodology_version = "development"
     checks = $checks
 }
 $json = $result | ConvertTo-Json -Depth 8
