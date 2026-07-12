@@ -4,7 +4,7 @@
      Системный контекст — в хабе COMPOSITION.md; топология репозиториев —
      в <methodology-repo>/docs/ARCHITECTURE.md. -->
 
-**Стек:** <Python | Go | Rust | TypeScript>  <!-- один на сервис -->
+**Стек:** <Python | Go | Rust>               <!-- один на сервис -->
 **Брокер:** <Kafka | Redpanda | NATS>       <!-- один на систему; клиент -->
 **Хаб:** <hub-repo>                          <!-- COMPOSITION/CONVENTIONS/системный compose/ADR -->
 
