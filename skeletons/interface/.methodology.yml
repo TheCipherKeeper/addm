@@ -1,3 +1,4 @@
 schema_version: 1
 repository_type: interface
 methodology_ref: <tag-or-commit>
+repository_id: <repository-id>
